@@ -58,7 +58,12 @@ html {
     position: relative;
     transition-duration: var(--main-transition);
     z-index: 2;
-    
+}
+@media (max-width: 767px) {
+    .main-title > h1 {
+        max-width: 260px;
+        font-size: 1.7rem;
+    }
 }
 .main-title > h1:hover {
     color: white;
@@ -154,18 +159,21 @@ html {
     z-index: 5;
     background-color: white;
 }
-.header .container {
+.header > .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     position: relative;
 }
+
 @media (max-width: 767px) {
-    .header .container {
+    .header > .container {
         text-align: center;
         justify-content: center;
         flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
 }
 .header .container .logo {
@@ -202,7 +210,7 @@ html {
 }
 @media (max-width: 767px) {
     .header .container > .main-nav > li > a {
-        padding: 0 10px;
+        padding: 0 5px;
         height: 40px;
     }
 }
@@ -514,7 +522,7 @@ html {
 }
 .gallery > .container .gallery-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 50px;
 }
 .gallery > .container .gallery-content > div {
@@ -565,7 +573,7 @@ html {
 }
 .features .features-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 50px;
 }
 .features .features-content .features-box {
@@ -699,7 +707,7 @@ html {
 }
 .testimonials .testimonials-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     column-gap: 50px;
     row-gap: 40px;
 }
@@ -746,7 +754,7 @@ html {
 }
 .team-members .members-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 40px;
 }
 .team-members .members-content .members-box {
@@ -829,7 +837,7 @@ html {
 }
 .services .serv-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 40px;
 }
 .services .serv-content .serv-box { 
@@ -1131,6 +1139,11 @@ html {
     background-color: white;
     width: 70px;
 }
+@media (max-width: 767px) {
+    .events .events-content .event1 .events-box .counter div {
+        width: 55px;
+    }
+}
 .events .events-content .event1 .events-box .counter div span {
     font-size: 15px;
     font-weight: normal;
@@ -1139,11 +1152,18 @@ html {
     padding: 10px 10px 0;
     color: black;
 }
+@media (max-width: 767px) {
+    .events .events-content .event1 .events-box .counter div span {
+        padding: 10px 5px 0;
+        font-size: 12px;
+    }
+}
 .events .events-content .event1 .events-box p {
     text-align: center;
     line-height: 1.6;
     color: var(--main-font-color);
     font-size: 18px;
+    padding: 0 20px;
 }
 .events .events-content .events2 {
     background-color: #f6f5f5;
@@ -1226,7 +1246,7 @@ html {
     z-index: 2;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 50px;
 }
 .plans .container .plans-content .plan-box {
@@ -1389,7 +1409,7 @@ html {
 .videos .videos-content .videos-list {
     background-color: white;
     flex: 1;
-    min-width: 300px;
+    min-width: 270px;
     order: 1;
 }
 .videos .videos-content .videos-list li {
@@ -1591,6 +1611,11 @@ html {
     width: 350px;
     caret-color: var(--main-color);
 }
+@media (max-width: 767px) {
+    .discount .section2 form input {
+        width: 270px;
+    }
+}
 .discount .section2 form input:focus {
     outline: none;
 }
@@ -1603,6 +1628,11 @@ html {
     width: 350px;
     caret-color: var(--main-color);
     resize: none;
+}
+@media (max-width: 767px) {
+    .discount .section2 form textarea  {
+        width: 270px;
+    }
 }
 .discount .section2 form textarea:focus {
     outline: none;
