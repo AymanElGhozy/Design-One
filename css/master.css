@@ -1255,31 +1255,30 @@ html {
     position: relative;
     flex: 1;
     box-shadow: 0 0 4px 1px rgb(0 0 0 / 20%);
-    overflow: hidden;
 }
 .plans .container .plans-content .plan-box::before,
 .plans .container .plans-content .plan-box::after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 0;
     height: 50%;
     background-color: #fafafa;
     transition: all var(--main-transition);
 }
 .plans .container .plans-content .plan-box::before {
     top: 0;
-    left: -100%;
+    left: 0;
 }
 .plans .container .plans-content .plan-box::after {
     bottom: 0;
-    right: -100%;
+    right: 0;
     z-index: 1;
 }
 .plans .container .plans-content .plan-box:hover::before {
-    left: 0;
+    width: 100%;
 }
 .plans .container .plans-content .plan-box:hover::after {
-    right: 0;
+    width: 100%;
 }
 .plans .container .plans-content .plan-box:nth-child(2) {
     transform: translateY(-20px);
@@ -1293,8 +1292,8 @@ html {
     position: absolute;
     right: 20px;
     writing-mode: vertical-lr;
-    top: 0;
-    background-color: var(--main-color);
+    top: -10px;
+    background-image: linear-gradient(to bottom, #3286c9 5%, #2196F3 15%);
     color: white;
     padding: 15px 15px 30px;
     font-weight: bold;
@@ -1308,6 +1307,15 @@ html {
     bottom: -1px;
     transform: translateX(-50%);
     left: 50%; 
+}
+.plans .container .plans-content .plan-box > span::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #1c6dad #1c6dad transparent;
+    top: 0;
+    left: -10px;
 }
 .plans .container .plans-content .plan-box .plan {
     text-align: center;
